@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     description: "Streamline operations, grow your digital presence, build high-performing remote teams.",
     url: "https://syntrosolutions.co",
     siteName: "Syntro Solutions",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    images: [{ url: "https://syntrosolutions.vercel.app/og-image.png", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Syntro Solutions",
     description: "Build smarter operations. Scale without the overhead.",
-    images: ["/og-image.png"],
+    images: ["https://syntrosolutions.vercel.app/og-image.png"],
   },
 };
 
