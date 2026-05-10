@@ -14,6 +14,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Syntro Solutions | Build Smarter. Scale Faster.",
+  icons: {
+    icon: "/Syntro.png",
+    apple: "/Syntro.png",
+  },
   description: "Syntro helps businesses streamline operations, grow their digital presence, and build high-performing remote teams — all backed by real industry experience.",
   keywords: ["virtual assistant", "business operations", "digital marketing", "remote teams", "business support"],
   openGraph: {

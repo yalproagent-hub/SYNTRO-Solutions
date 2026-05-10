@@ -37,6 +37,7 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
+
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -48,7 +49,16 @@ export default function Navbar() {
           />
           <div className="flex flex-col leading-none">
             <span className="text-xl font-bold text-dark-navy tracking-tight">SYNTRO</span>
-            <span className="text-[10px] font-medium text-primary-blue tracking-[0.2em] uppercase">Solutions</span>
+            <span
+              className="text-[10px] font-medium tracking-[0.2em] uppercase"
+              style={{
+                background: "linear-gradient(135deg, #1C6BF4, #26B58F, #22C55E)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Solutions
+            </span>
           </div>
         </Link>
 
@@ -65,15 +75,16 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA */}
+        {/* Desktop CTA Button */}
         <div className="hidden md:block">
-          <button 
-            className="btn-primary py-2.5 px-6 text-sm"
+          <button
+            className="group flex items-center gap-2 px-6 py-2.5 rounded-full text-white font-black text-sm transition-all duration-300 hover:scale-[1.02] hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(28,107,244,0.35)] shadow-[0_6px_20px_rgba(28,107,244,0.25)]"
+            style={{ background: "linear-gradient(135deg, #1C6BF4, #26B58F, #22C55E)" }}
             data-cal-link="thameem-smta-rey0gp/discovery-call"
             data-cal-config='{"layout":"month_view"}'
           >
             Book a Call
-            <ArrowRight size={16} />
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </button>
         </div>
 
@@ -100,19 +111,21 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium text-charcoal"
+                  className="text-lg font-medium text-charcoal hover:text-primary-blue transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
-              <button 
-                className="btn-primary justify-center"
+              <button
+                className="group flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white font-black text-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_10px_30px_rgba(28,107,244,0.35)]"
+                style={{ background: "linear-gradient(135deg, #1C6BF4, #26B58F, #22C55E)" }}
                 data-cal-link="thameem-smta-rey0gp/discovery-call"
                 data-cal-config='{"layout":"month_view"}'
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Book a Call
-                <ArrowRight size={20} />
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </button>
             </div>
           </motion.div>
